@@ -1,0 +1,26 @@
+.container2 {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tekst {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    padding: 18px;
+    border-radius: 3px;
+}
+
+.kod {
+    margin: 20px 0;
+    padding: 5px;
+    background-color: rgb(180, 153, 180);
+    color: #fff;
+    font-size: 1.125rem;
+    border-radius: 5px;
+}
