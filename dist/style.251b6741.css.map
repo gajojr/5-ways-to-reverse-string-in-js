@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"style.251b6741.css","sourceRoot":"..\\src","sourcesContent":["body {\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    color: #333;\r\n}"]}
