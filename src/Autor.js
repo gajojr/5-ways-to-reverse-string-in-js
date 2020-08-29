@@ -5,7 +5,7 @@ export default function Autor({ ime, opis, adresaSlike }) {
   return (
     <div className="container">
       <div className="centered">
-        <img src={adresaSlike} alt="slika autora" />
+        <img src={adresaSlike} alt="slika autora" className="img1" />
         <h1>{ime}</h1>
       </div>
       <p>{opis}</p>
