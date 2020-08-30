@@ -39,8 +39,8 @@ const App = () => {
           return newStr;/n
         }"
         kodES5="function reverseStr2 (str) {/n
-          let newStr = '';/n
-          for (let i = str.length - 1; i >= 0; i--) {/n
+          var newStr = '';/n
+          for (var i = str.length - 1; i >= 0; i--) {/n
             newStr += str[i];/n
           }/n
           /n
@@ -51,7 +51,7 @@ const App = () => {
         imeMetode="3. For of loop"
         opisPristupa="Ahhh, classic for loop, what's better than that? Well, if you are working in C
         for loop is just fine, but since we are using javascript, why not use modern sintax? For of loop
-        has the same approach but it looks nicer than for loop."
+        has the same approach but it looks nicer than for loop. For es5 we have alternative forEach"
         kodES6="const reverseStr3 = str => {/n
           let newStr = '';/n
           for (let char of str) {/n
@@ -60,7 +60,13 @@ const App = () => {
           /n
           return newStr;/n
         }"
-        kodES5="/* ES5 doesn't support for of loop */"
+        kodES5="function reverseStr3(str) {/n
+          var newStr = '';/n
+          str.split('').forEach(function(el){/n
+            newStr = el + newStr/n
+          })/n
+          return newStr/n
+        "
       />
       <Isecak
         imeMetode="4. reduce method"
