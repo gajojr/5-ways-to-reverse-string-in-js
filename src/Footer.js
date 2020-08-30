@@ -16,7 +16,7 @@ export default function Autor({
         <a href={igAdresa}>
           <img src={igicon} alt="ig adresa" />
         </a>
-        <a href={eAdresa}>
+        <a href={`mailto:${eAdresa}`}>
           <img src={eicon} alt="email adresa" />
         </a>
         <a href={githubAdresa}>
@@ -24,7 +24,7 @@ export default function Autor({
         </a>
       </div>
       <div className="projekat">
-        github project adress: <a href={`mailto:${ghAdresaProjekta}`}>here</a>
+        github project adress: <a href={ghAdresaProjekta}>here</a>
       </div>
     </div>
   );

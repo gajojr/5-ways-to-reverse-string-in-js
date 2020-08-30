@@ -28489,7 +28489,7 @@ function Autor(_ref) {
     src: igicon,
     alt: "ig adresa"
   })), /*#__PURE__*/_react.default.createElement("a", {
-    href: eAdresa
+    href: "mailto:".concat(eAdresa)
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: eicon,
     alt: "email adresa"
@@ -28501,7 +28501,7 @@ function Autor(_ref) {
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "projekat"
   }, "github project adress: ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "mailto:".concat(ghAdresaProjekta)
+    href: ghAdresaProjekta
   }, "here")));
 }
 },{"react":"../node_modules/react/index.js","./styles/Footer.css":"styles/Footer.css"}],"App.js":[function(require,module,exports) {
@@ -28537,12 +28537,12 @@ var App = function App() {
     imeMetode: "2. Classic for loop",
     opisPristupa: "In this way we will use for loop to iterate through string and place charachters in\r new string, then we will return that string. Loop starts at the end of the original string so we\r can put them in new string in reversed way.",
     kodES6: "const reverseStr2 = str => {/n\r let newStr = '';/n\r for (let i = str.length - 1; i >= 0; i--) {/n\r newStr += str[i];/n\r }/n\r /n\r return newStr;/n\r }",
-    kodES5: "function reverseStr2 (str) {/n\r let newStr = '';/n\r for (let i = str.length - 1; i >= 0; i--) {/n\r newStr += str[i];/n\r }/n\r /n\r return newStr;/n\r }"
+    kodES5: "function reverseStr2 (str) {/n\r var newStr = '';/n\r for (var i = str.length - 1; i >= 0; i--) {/n\r newStr += str[i];/n\r }/n\r /n\r return newStr;/n\r }"
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "3. For of loop",
-    opisPristupa: "Ahhh, classic for loop, what's better than that? Well, if you are working in C\r for loop is just fine, but since we are using javascript, why not use modern sintax? For of loop\r has the same approach but it looks nicer than for loop.",
+    opisPristupa: "Ahhh, classic for loop, what's better than that? Well, if you are working in C\r for loop is just fine, but since we are using javascript, why not use modern sintax? For of loop\r has the same approach but it looks nicer than for loop. For es5 we have alternative forEach",
     kodES6: "const reverseStr3 = str => {/n\r let newStr = '';/n\r for (let char of str) {/n\r newStr = char + newStr;/n\r }/n\r /n\r return newStr;/n\r }",
-    kodES5: "/* ES5 doesn't support for of loop */"
+    kodES5: "function reverseStr3(str) {/n\r var newStr = '';/n\r str.split('').forEach(function(el){/n\r newStr = el + newStr/n\r })/n\r return newStr/n\r "
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "4. reduce method",
     opisPristupa: "One of the most interesting methods of js in my opinion. It collects charachter\r by charachter and adds it to a string. This method works with numbers too. So you can perform addition\r for expample",
@@ -28593,7 +28593,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50368" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
