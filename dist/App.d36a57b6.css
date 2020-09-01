@@ -71,6 +71,27 @@ p {
     font-size: 1.125rem;
     border-radius: 5px;
 }
+
+.razmak {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(92, 83, 83);
+    color: #fff;
+}
 .container4 {
     margin-top: 20px;
     width: 140%;
