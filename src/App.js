@@ -66,6 +66,7 @@ const App = () => {
             newStr = el + newStr
           })
           return newStr
+        }
         "
       />
       <Isecak
