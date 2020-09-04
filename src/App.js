@@ -47,7 +47,28 @@ const App = () => {
           return newStr;
         }"
       />
-
+      <Isecak
+        imeMetode="3. For of loop"
+        opisPristupa="Ahhh, classic for loop, what's better than that? Well, if you are working in C
+        for loop is just fine, but since we are using javascript, why not use modern syntax? For of loop
+        has the same approach but it looks nicer than for loop. For es5 we have alternative forEach"
+        kodES6="const reverseStr3 = str => {
+          let newStr = '';
+          for (let char of str) {
+            newStr = char + newStr;
+          }
+          
+          return newStr;
+        }"
+        kodES5="function reverseStr3(str) {
+          var newStr = '';
+          str.split('').forEach(function(el){
+            newStr = el + newStr
+          })
+          return newStr
+        }
+        "
+      />
       <Isecak
         imeMetode="4. reduce method"
         opisPristupa="One of the most interesting methods of js in my opinion. It collects charachter
