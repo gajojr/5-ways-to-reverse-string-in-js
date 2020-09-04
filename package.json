@@ -1,7 +1,7 @@
 {
     "name": "blogobrtanjestringa",
     "version": "1.0.0",
-    "homepage": "https://gajojr.github.io//5-ways-to-reverse-a-string",
+    "homepage": "https://gajojr.github.io//5-ways-to-reverse-string-in-js",
     "description": "",
     "main": "index.js",
     "dependencies": {
