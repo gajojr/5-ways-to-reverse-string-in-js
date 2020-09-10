@@ -1,36 +1,37 @@
 {
-  "name": "blogobrtanjestringa",
-  "version": "1.0.0",
-  "homepage": "https://gajojr.github.io//5-ways-to-reverse-string-in-js",
-  "main": "index.js",
-  "dependencies": {
-    "eslint": "^7.7.0",
-    "gh-pages": "^3.1.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.1.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-script-tag": "^1.1.2",
-    "webpack": "^4.44.1",
-    "yarn": "^1.22.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "parcel src/index.html",
-    "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm build",
-    "deploy": "gh-pages -d build"
-  },
-  "author": "Andrija Gajic",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gajojr/5-ways-to-reverse-string-in-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gajojr/5-ways-to-reverse-string-in-js/issues"
-  },
-  "description": ""
+    "name": "blogobrtanjestringa",
+    "version": "1.0.0",
+    "homepage": "https://gajojr.github.io//5-ways-to-reverse-string-in-js",
+    "main": "index.js",
+    "dependencies": {
+        "eslint": "^7.7.0",
+        "gh-pages": "^3.1.0",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.1.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-script-tag": "^1.1.2",
+        "webpack": "^4.44.1",
+        "yarn": "^1.22.5"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node src/App.js",
+        "dev": "parcel src/index.html",
+        "format": "prettier \"src/**/*.{js,html}\" --write",
+        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "predeploy": "npm build",
+        "deploy": "gh-pages -d build"
+    },
+    "author": "Andrija Gajic",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gajojr/5-ways-to-reverse-string-in-js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/gajojr/5-ways-to-reverse-string-in-js/issues"
+    },
+    "description": ""
 }

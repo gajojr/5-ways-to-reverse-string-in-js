@@ -28542,7 +28542,7 @@ var App = function App() {
     imeMetode: "3. For of loop",
     opisPristupa: "Ahhh, classic for loop, what's better than that? Well, if you are working in C\r for loop is just fine, but since we are using javascript, why not use modern syntax? For of loop\r has the same approach but it looks nicer than for loop. For es5 we have alternative forEach",
     kodES6: "const reverseStr3 = str => {\r let newStr = '';\r for (let char of str) {\r newStr = char + newStr;\r }\r return newStr;\r }",
-    kodES5: "function reverseStr3(str) {\r var newStr = '';\r str.split('').forEach(function(el){\r newStr = el + newStr\r })\r return newStr\r "
+    kodES5: "function reverseStr3(str) {\r var newStr = '';\r str.split('').forEach(function(el){\r newStr = el + newStr\r })\r return newStr\r }\r "
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "4. reduce method",
     opisPristupa: "One of the most interesting methods of js in my opinion. It collects charachter\r by character and adds it to a string. This method works with numbers too. So you can perform addition\r for expample",
@@ -28593,7 +28593,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49993" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
