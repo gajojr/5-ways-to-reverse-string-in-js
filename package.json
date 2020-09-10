@@ -14,7 +14,9 @@
         "webpack": "^4.44.1",
         "yarn": "^1.22.5"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "css-loader": "^4.3.0"
+    },
     "scripts": {
         "start": "node src/App.js",
         "dev": "parcel src/index.html",
