@@ -2,17 +2,16 @@
     margin-top: 20px;
     width: 100%;
     max-width: 650px;
-    height: 100px;
     background-color: rgb(194, 123, 194);
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    align-content: center;
+    align-content: space-between;
 }
 
 .adrese {
     padding: 15px;
-    width: 300px;
+    width: 400px;
 }
 
 .adrese>a {
