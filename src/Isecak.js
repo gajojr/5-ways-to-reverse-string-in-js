@@ -1,6 +1,23 @@
 import React from "react";
 import "./styles/Isecak.css";
 
+const formattedCode = (code) => {
+  return code.split("/n").map((item, i) => {
+    const brojTabova = (item.match(/&tab;/g) || []).length;
+    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
+    if (brojTabova === 1) {
+      return <div key={i}>&nbsp;&nbsp;&nbsp;&nbsp;{item}</div>;
+    } else if (brojTabova === 2) {
+      return (
+        <div key={i}>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item}
+        </div>
+      );
+    }
+    return <div key={i}>{item}</div>;
+  });
+};
+
 export default function Isecak({ imeMetode, opisPristupa, kodES6, kodES5 }) {
   return (
     <div className="container2">
@@ -13,22 +30,7 @@ export default function Isecak({ imeMetode, opisPristupa, kodES6, kodES5 }) {
         <button type="button">copy code</button>
       </div>
       <div className="kod">
-        <code>
-          {kodES6.split("/n").map((item, i) => {
-            const brojTabova = (item.match(/&tab;/g) || []).length;
-            item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
-            if (brojTabova === 1) {
-              return <div key={i}>&nbsp;&nbsp;&nbsp;&nbsp;{item}</div>;
-            } else if (brojTabova === 2) {
-              return (
-                <div key={i}>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item}
-                </div>
-              );
-            }
-            return <div key={i}>{item}</div>;
-          })}
-        </code>
+        <code>{formattedCode(kodES6)}</code>
         <br />
       </div>
       <div className="razmak">
@@ -36,22 +38,7 @@ export default function Isecak({ imeMetode, opisPristupa, kodES6, kodES5 }) {
         <button type="button">copy code</button>
       </div>
       <div className="kod">
-        <code>
-          {kodES5.split("/n").map((item, i) => {
-            const brojTabova = (item.match(/&tab;/g) || []).length;
-            item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
-            if (brojTabova === 1) {
-              return <div key={i}>&nbsp;&nbsp;&nbsp;&nbsp;{item}</div>;
-            } else if (brojTabova === 2) {
-              return (
-                <div key={i}>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item}
-                </div>
-              );
-            }
-            return <div key={i}>{item}</div>;
-          })}
-        </code>
+        <code>{formattedCode(kodES5)}</code>
       </div>
     </div>
   );

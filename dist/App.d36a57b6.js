@@ -28429,6 +28429,27 @@ require("./styles/Isecak.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var formattedCode = function formattedCode(code) {
+  return code.split("/n").map(function (item, i) {
+    var brojTabova = (item.match(/&tab;/g) || []).length;
+    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
+
+    if (brojTabova === 1) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0", item);
+    } else if (brojTabova === 2) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", item);
+    }
+
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: i
+    }, item);
+  });
+};
+
 function Isecak(_ref) {
   var imeMetode = _ref.imeMetode,
       opisPristupa = _ref.opisPristupa,
@@ -28444,47 +28465,13 @@ function Isecak(_ref) {
     type: "button"
   }, "copy code")), /*#__PURE__*/_react.default.createElement("div", {
     className: "kod"
-  }, /*#__PURE__*/_react.default.createElement("code", null, kodES6.split("/n").map(function (item, i) {
-    var brojTabova = (item.match(/&tab;/g) || []).length;
-    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
-
-    if (brojTabova === 1) {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        key: i
-      }, "\xA0\xA0\xA0\xA0", item);
-    } else if (brojTabova === 2) {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        key: i
-      }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", item);
-    }
-
-    return /*#__PURE__*/_react.default.createElement("div", {
-      key: i
-    }, item);
-  })), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("code", null, formattedCode(kodES6)), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
     className: "razmak"
   }, /*#__PURE__*/_react.default.createElement("p", null, "ES5:"), /*#__PURE__*/_react.default.createElement("button", {
     type: "button"
   }, "copy code")), /*#__PURE__*/_react.default.createElement("div", {
     className: "kod"
-  }, /*#__PURE__*/_react.default.createElement("code", null, kodES5.split("/n").map(function (item, i) {
-    var brojTabova = (item.match(/&tab;/g) || []).length;
-    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
-
-    if (brojTabova === 1) {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        key: i
-      }, "\xA0\xA0\xA0\xA0", item);
-    } else if (brojTabova === 2) {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        key: i
-      }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", item);
-    }
-
-    return /*#__PURE__*/_react.default.createElement("div", {
-      key: i
-    }, item);
-  }))));
+  }, /*#__PURE__*/_react.default.createElement("code", null, formattedCode(kodES5))));
 }
 },{"react":"../node_modules/react/index.js","./styles/Isecak.css":"styles/Isecak.css"}],"styles/Footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
