@@ -6,8 +6,12 @@ dugmad.forEach((button) => {
                     code je div,u tom divu se nalazi tekst za stampanje*/
 
         // sadrzaj polja
-        const copyText =
-            button.parentElement.nextElementSibling.firstChild.firstChild.textContent;
+        const copyTextLines =
+            button.parentElement.nextElementSibling.firstChild.querySelectorAll('div');
+        let copyText = '';
+        copyTextLines.forEach(div => {
+            copyText += div.textContent + '\n';
+        })
 
         console.log(copyText);
 

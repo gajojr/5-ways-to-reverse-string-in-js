@@ -21,8 +21,8 @@ const App = () => {
         easiest and is recommended, but sometimes on interview you mustn't use reverse() method to solve this
         problem."
         kodES6="const reverseStr1 = str => str.split('').reverse().join('');"
-        kodES5="function reverseStr1(str){
-          return str.split('').reverse().join('');
+        kodES5="function reverseStr1(str){/n
+          &tab;return str.split('').reverse().join('');/n
         }"
       />
       <Isecak
@@ -30,21 +30,21 @@ const App = () => {
         opisPristupa="In this way we will use for loop to iterate through string and place charachters in
         new string, then we will return that string. Loop starts at the end of the original string so we
         can put them in new string in reversed way."
-        kodES6="const reverseStr2 = str => {
-          let newStr = '';
-          for (let i = str.length - 1; i >= 0; i--) {
-            newStr += str[i];
-          }
-          
-          return newStr;
+        kodES6="const reverseStr2 = str => {/n
+          &tab;let newStr = '';/n
+          &tab;for (let i = str.length - 1; i >= 0; i--) {/n
+          &tab;&tab;newStr += str[i];/n
+          &tab;}/n
+          /n
+          &tab;return newStr;/n
         }"
-        kodES5="function reverseStr2 (str) {
-          var newStr = '';
-          for (var i = str.length - 1; i >= 0; i--) {
-            newStr += str[i];
-          }
-          
-          return newStr;
+        kodES5="function reverseStr2 (str) {/n
+          &tab;var newStr = '';/n
+          &tab;for (var i = str.length - 1; i >= 0; i--) {/n
+            &tab;&tab;newStr += str[i];/n
+          &tab;}/n
+          /n
+          &tab;return newStr;/n
         }"
       />
       <Isecak
@@ -52,30 +52,29 @@ const App = () => {
         opisPristupa="Ahhh, classic for loop, what's better than that? Well, if you are working in C
         for loop is just fine, but since we are using javascript, why not use modern syntax? For of loop
         has the same approach but it looks nicer than for loop. For es5 we have alternative forEach"
-        kodES6="const reverseStr3 = str => {
-          let newStr = '';
-          for (let char of str) {
-            newStr = char + newStr;
-          }
-          
-          return newStr;
+        kodES6="const reverseStr3 = str => {/n
+          &tab;let newStr = '';/n
+          &tab;for (let char of str) {/n
+            &tab;&tab;newStr = char + newStr;/n
+          &tab;}/n
+          /n
+          &tab;return newStr;/n
         }"
-        kodES5="function reverseStr3(str) {
-          var newStr = '';
-          str.split('').forEach(function(el){
-            newStr = el + newStr
-          })
-          return newStr
-        }
-        "
+        kodES5="function reverseStr3(str) {/n
+          &tab;var newStr = '';/n
+          &tab;str.split('').forEach(function(el){/n
+            &tab;&tab;newStr = el + newStr/n
+          &tab;})/n
+          &tab;return newStr/n
+        }"
       />
       <Isecak
         imeMetode="4. reduce method"
         opisPristupa="One of the most interesting methods of js in my opinion. It collects charachter
         by character and adds it to a string. This method works with numbers too. So you can perform addition
         for expample"
-        kodES6="const reverseStr4 = str => {
-          return str.split('').reduce((reversed, char) => char + reversed);
+        kodES6="const reverseStr4 = str => {/n
+          &tab;return str.split('').reduce((reversed, char) => char + reversed);/n
         }"
         kodES5="/* ES5 doesn't support reduce method */"
       />
@@ -83,8 +82,8 @@ const App = () => {
         imeMetode="5. reduceRight method"
         opisPristupa="Very simillar to reduce method, you can probably guess what is doing different. 
         It is going from right to left"
-        kodES6="const reverseStr5 = str => {
-          return str.split('').reduceRight((reversed, char) => reversed + char);
+        kodES6="const reverseStr5 = str => {/n
+          &tab;return str.split('').reduceRight((reversed, char) => reversed + char);/n
         }"
         kodES5="/* ES5 doesn't support reduceRight method */"
       />

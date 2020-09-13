@@ -124,7 +124,11 @@ dugmad.forEach(function (button) {
     /* idemo u parent div, pa sledeci rodjak, kome je prvo dete code, a dete od
                 code je div,u tom divu se nalazi tekst za stampanje*/
     // sadrzaj polja
-    var copyText = button.parentElement.nextElementSibling.firstChild.firstChild.textContent;
+    var copyTextLines = button.parentElement.nextElementSibling.firstChild.querySelectorAll('div');
+    var copyText = '';
+    copyTextLines.forEach(function (div) {
+      copyText += div.textContent + '\n';
+    });
     console.log(copyText); // Kopiraj na clipboard
 
     navigator.clipboard.writeText(copyText); // Obavesti da je kopiranje zavrseno
@@ -160,7 +164,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62620" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

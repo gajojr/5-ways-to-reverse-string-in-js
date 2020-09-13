@@ -24,7 +24,7 @@ export default function Autor({
         </a>
       </div>
       <div className="projekat">
-        github project adress: <a href={ghAdresaProjekta}>here</a>
+        github project address: <a href={ghAdresaProjekta}>here</a>
       </div>
     </div>
   );

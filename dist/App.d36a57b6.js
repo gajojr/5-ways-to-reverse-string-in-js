@@ -28444,13 +28444,47 @@ function Isecak(_ref) {
     type: "button"
   }, "copy code")), /*#__PURE__*/_react.default.createElement("div", {
     className: "kod"
-  }, /*#__PURE__*/_react.default.createElement("code", null, kodES6)), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("code", null, kodES6.split("/n").map(function (item, i) {
+    var brojTabova = (item.match(/&tab;/g) || []).length;
+    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
+
+    if (brojTabova === 1) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0", item);
+    } else if (brojTabova === 2) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", item);
+    }
+
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: i
+    }, item);
+  })), /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("div", {
     className: "razmak"
   }, /*#__PURE__*/_react.default.createElement("p", null, "ES5:"), /*#__PURE__*/_react.default.createElement("button", {
     type: "button"
   }, "copy code")), /*#__PURE__*/_react.default.createElement("div", {
     className: "kod"
-  }, /*#__PURE__*/_react.default.createElement("code", null, kodES5)));
+  }, /*#__PURE__*/_react.default.createElement("code", null, kodES5.split("/n").map(function (item, i) {
+    var brojTabova = (item.match(/&tab;/g) || []).length;
+    item = " ".repeat(4 * brojTabova) + item.replaceAll("&tab;", "");
+
+    if (brojTabova === 1) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0", item);
+    } else if (brojTabova === 2) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        key: i
+      }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", item);
+    }
+
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: i
+    }, item);
+  }))));
 }
 },{"react":"../node_modules/react/index.js","./styles/Isecak.css":"styles/Isecak.css"}],"styles/Footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -28500,7 +28534,7 @@ function Autor(_ref) {
     alt: "email adresa"
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "projekat"
-  }, "github project adress: ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "github project address: ", /*#__PURE__*/_react.default.createElement("a", {
     href: ghAdresaProjekta
   }, "here")));
 }
@@ -28532,26 +28566,26 @@ var App = function App() {
     imeMetode: "1. Array.reverse()",
     opisPristupa: "For this way we will use Array method by converting string to array first using split(''), then\r using method reverse(), reverse it, then using method join('') put it back together in string.This approach is\r easiest and is recommended, but sometimes on interview you mustn't use reverse() method to solve this\r problem.",
     kodES6: "const reverseStr1 = str => str.split('').reverse().join('');",
-    kodES5: "function reverseStr1(str){\r return str.split('').reverse().join('');\r }"
+    kodES5: "function reverseStr1(str){/n\r &tab;return str.split('').reverse().join('');/n\r }"
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "2. Classic for loop",
     opisPristupa: "In this way we will use for loop to iterate through string and place charachters in\r new string, then we will return that string. Loop starts at the end of the original string so we\r can put them in new string in reversed way.",
-    kodES6: "const reverseStr2 = str => {\r let newStr = '';\r for (let i = str.length - 1; i >= 0; i--) {\r newStr += str[i];\r }\r return newStr;\r }",
-    kodES5: "function reverseStr2 (str) {\r var newStr = '';\r for (var i = str.length - 1; i >= 0; i--) {\r newStr += str[i];\r }\r return newStr;\r }"
+    kodES6: "const reverseStr2 = str => {/n\r &tab;let newStr = '';/n\r &tab;for (let i = str.length - 1; i >= 0; i--) {/n\r &tab;&tab;newStr += str[i];/n\r &tab;}/n\r /n\r &tab;return newStr;/n\r }",
+    kodES5: "function reverseStr2 (str) {/n\r &tab;var newStr = '';/n\r &tab;for (var i = str.length - 1; i >= 0; i--) {/n\r &tab;&tab;newStr += str[i];/n\r &tab;}/n\r /n\r &tab;return newStr;/n\r }"
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "3. For of loop",
     opisPristupa: "Ahhh, classic for loop, what's better than that? Well, if you are working in C\r for loop is just fine, but since we are using javascript, why not use modern syntax? For of loop\r has the same approach but it looks nicer than for loop. For es5 we have alternative forEach",
-    kodES6: "const reverseStr3 = str => {\r let newStr = '';\r for (let char of str) {\r newStr = char + newStr;\r }\r return newStr;\r }",
-    kodES5: "function reverseStr3(str) {\r var newStr = '';\r str.split('').forEach(function(el){\r newStr = el + newStr\r })\r return newStr\r }\r "
+    kodES6: "const reverseStr3 = str => {/n\r &tab;let newStr = '';/n\r &tab;for (let char of str) {/n\r &tab;&tab;newStr = char + newStr;/n\r &tab;}/n\r /n\r &tab;return newStr;/n\r }",
+    kodES5: "function reverseStr3(str) {/n\r &tab;var newStr = '';/n\r &tab;str.split('').forEach(function(el){/n\r &tab;&tab;newStr = el + newStr/n\r &tab;})/n\r &tab;return newStr/n\r }"
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "4. reduce method",
     opisPristupa: "One of the most interesting methods of js in my opinion. It collects charachter\r by character and adds it to a string. This method works with numbers too. So you can perform addition\r for expample",
-    kodES6: "const reverseStr4 = str => {\r return str.split('').reduce((reversed, char) => char + reversed);\r }",
+    kodES6: "const reverseStr4 = str => {/n\r &tab;return str.split('').reduce((reversed, char) => char + reversed);/n\r }",
     kodES5: "/* ES5 doesn't support reduce method */"
   }), /*#__PURE__*/_react.default.createElement(_Isecak.default, {
     imeMetode: "5. reduceRight method",
     opisPristupa: "Very simillar to reduce method, you can probably guess what is doing different. \r It is going from right to left",
-    kodES6: "const reverseStr5 = str => {\r return str.split('').reduceRight((reversed, char) => reversed + char);\r }",
+    kodES6: "const reverseStr5 = str => {/n\r &tab;return str.split('').reduceRight((reversed, char) => reversed + char);/n\r }",
     kodES5: "/* ES5 doesn't support reduceRight method */"
   }), /*#__PURE__*/_react.default.createElement(_Footer.default, {
     igicon: "data:image/png;base64,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",
@@ -28593,7 +28627,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62620" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49850" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
