@@ -7,10 +7,31 @@
     <title>5 WAYS TO REVERSE STRING IN JS</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link href="favicon.ico" rel="icon">
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root">not rendered</div>
+    <div id="root">
+        <div class="loader"></div>
+    </div>
     <script src="./App.js"></script>
     <script src="./buttons.js"></script>
 </body>
