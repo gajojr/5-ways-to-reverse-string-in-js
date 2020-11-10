@@ -128,8 +128,7 @@ dugmad.forEach(function (button) {
     var copyText = '';
     copyTextLines.forEach(function (div) {
       copyText += div.textContent + '\n';
-    });
-    console.log(copyText); // Kopiraj na clipboard
+    }); // Kopiraj na clipboard
 
     navigator.clipboard.writeText(copyText); // Obavesti da je kopiranje zavrseno
 
@@ -164,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49850" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54216" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

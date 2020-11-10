@@ -1,7 +1,6 @@
 .container2 {
     margin-top: 20px;
-    width: 100%;
-    max-width: 650px;
+    width: 43vw;
     height: auto;
     background-color: orange;
     padding: 10px;
@@ -44,4 +43,34 @@ button {
 button:hover {
     background-color: rgb(92, 83, 83);
     color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .container2 {
+        width: 62vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container2 {
+        width: 76vw;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container2 {
+        width: 88vw;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .container2 {
+        width: 96vw;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .kod {
+        word-wrap: break-word;
+    }
 }

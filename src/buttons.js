@@ -11,10 +11,7 @@ dugmad.forEach((button) => {
         let copyText = '';
         copyTextLines.forEach(div => {
             copyText += div.textContent + '\n';
-        })
-
-        console.log(copyText);
-
+        });
         // Kopiraj na clipboard
         navigator.clipboard.writeText(copyText);
 

@@ -3,8 +3,7 @@
 }
 
 .container {
-    width: 100%;
-    max-width: 650px;
+    width: 43vw;
     height: auto;
     background: rgb(199, 198, 212);
     background: linear-gradient( 90deg, rgba(199, 198, 212, 1) 0%, rgba(0, 120, 254, 1) 100%);
@@ -33,4 +32,55 @@ h1 {
 p {
     font-size: 1.125rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 62vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        width: 76vw;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container {
+        width: 88vw;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .container {
+        width: 96vw;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .img1 {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .img1 {
+        width: 130px;
+        height: 130px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .img1 {
+        width: 115px;
+        height: 115px;
+    }
+    h1 {
+        font-size: 24px;
+    }
 }

@@ -1,17 +1,17 @@
 .container4 {
     margin-top: 20px;
-    width: 100%;
-    max-width: 650px;
+    width: 43vw;
     background-color: rgb(194, 123, 194);
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
 }
 
 .adrese {
     padding: 15px;
-    width: 400px;
+    display: flex;
+    flex-direction: row;
 }
 
 .adrese>a {
@@ -26,9 +26,47 @@ img {
 
 .projekat {
     font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
-    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .projekat>a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .container4 {
+        width: 62vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container4 {
+        width: 76vw;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .projekat {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container4 {
+        width: 88vw;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .container4 {
+        width: 96vw;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .projekat {
+        font-size: 12px;
+    }
 }
